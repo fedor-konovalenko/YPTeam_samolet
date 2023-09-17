@@ -17,14 +17,22 @@ ____________
 
 3. Выбор модели
 - Для задачи object detection можно использовать модели, такие как Faster R-CNN, SSD или YOLO. Однако, учитывая ограничения по ресурсам (работа на CPU), рекомендуется выбрать более легкую и быструю модель, например, MobileNet с SSD.
+Примеры
+- [раз](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html)
+- [два](https://habr.com/en/articles/691464/)
+- [три](https://towardsdatascience.com/how-to-work-with-object-detection-datasets-in-coco-format-9bf4fb5848a4)
+- [три с половиной](https://habr.com/en/companies/itmai/articles/541858/)
 
 4. Обучение модели
 - Настройте гиперпараметры модели (скорость обучения, размер партии и т. д.). **TuneSearch**
-- Обучите модель на обучающей выборке, контролируя качество на валидационной выборке.
+- Обучите модель на обучающей выборке, контролируя качество на валидационной выборке. [про предобученные модели](https://pytorch.org/vision/stable/models.html)
 
 5. Валидация и тестирование
 - Оцените модель на тестовой выборке.
 - Используйте метрику mAP@.50 для оценки качества детекции объектов.
+[про метрику применительно к задаче object detection](https://jonathan-hui.medium.com/map-mean-average-precision-for-object-detection-45c121a31173)
+[на первой время, кажется, нам достаточно будет стандартной способа из sklearn. надо только про average-параметр подумать](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html)
+
 
 6. Оптимизация
 - При необходимости оптимизируйте модель с учетом вычислительных ресурсов и времени обработки.
