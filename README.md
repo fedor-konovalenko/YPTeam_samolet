@@ -11,7 +11,7 @@ ____________
 
 Анализ готовности многоквартирных домов по изображениям с камер наблюдения. Есть датасет из 252 изображений с Сoco- разметкой по ячейкам 3 типов готовности (epmty, window, filled) и около 200 изображений без разметки. Нужно научиться на аналогичных фотографиях находить ячейки и определять их тип. Целевая метрика mAP50. [Подробности](https://jonathan-hui.medium.com/map-mean-average-precision-for-object-detection-45c121a31173)
 
-<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/pictures/0000007202building.jpg" width="500" height="500">
+<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/blob/main/pictures/0000007202building.jpg" width="750" height="500">
 
 *Пример изображения*
 
@@ -19,9 +19,9 @@ ____________
 
 Поскольку фотографий в исходном датасете мало, и могие фотографии в нем повторяются, были вручную размечены фотографии из неразмеченного датасета, а также сгенерированы изображения строящихся зданий, например, с помощьью [kandinsky.ai](https://fusionbrain.ai/en/editor/). 
 
-<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/pictures/00012-3676209845.png" width="500" height="500">
+<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/blob/main/pictures/00012-3676209845.png" width="750" height="500">
 
-<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/pictures/Untitled.jpeg" width="500" height="500">
+<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/blob/main/pictures/Untitled.jpeg" width="750" height="500">
 
 *Сгенерированные изображения*
 
@@ -44,7 +44,7 @@ ____________
 |Faster-RCNN|0,20|
 |SSD300-Mobilenet|0,05|
 
-<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/pictures/ssd300.jpg" width="500" height="500">
+<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/blob/main/pictures/ssd300.jpg" width="750" height="500">
 
 *Пример работы SSD300-VGG16*
 
@@ -59,23 +59,28 @@ ____________
 - Обрезка по ячейкам
 - Классификация ячейки
 
-<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/pictures/Untitl1ed.png" width="500" height="500">
+<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/blob/main/pictures/Untitl1ed.png" width="750" height="500">
 
-<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/pictures/33.jpeg" width="500" height="500">
+<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/blob/main/pictures/33.jpeg" width="750" height="500">
 
 *Результат поиска контуров ячеек*
 
-<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/pictures/Screenshot_2023-09-23_23-38-55.png" width="500" height="500">
+<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/blob/main/pictures/Screenshot_2023-09-23_23-38-55.png" width="250" height="500">
 
 *Предобработка обрезанных ячеек*
 
-<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/pictures/Screenshot_2023-09-23_23-39-19.png" width="500" height="500">
+<img src="https://github.com/fedor-konovalenko/YPTeam_samolet/blob/main/pictures/Screenshot_2023-09-23_23-39-19.png" width="250" height="500">
 
 *Результат классификации*
 
 При детектировании ячеек таким способом метрика mAP не измерялась, однако, точность классификации составила 98% на валидационной выборке.
 
 ## Выводы
+
+ПОлученные в заданные сроки результаты оставляют желать лучшего, однако могут быть намечены следующие пути совершенствования:
+- сбор или генерация и разметка дополнительных данных
+- отказ от open cv в версии с двумя моделями в пользу более точного способа поиска контуров не проемов, а именно ячеек
+- использование моделей детекции, требующих больше вычислительных ресурсов, чем расссмотренные.
 
 ## Список источников
 
