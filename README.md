@@ -14,6 +14,7 @@ Team repository for [Urbancode Hakatone](https://changellenge.com/championships/
 - [два](https://habr.com/en/articles/691464/)
 - [три](https://towardsdatascience.com/how-to-work-with-object-detection-datasets-in-coco-format-9bf4fb5848a4)
 - [три с половиной](https://habr.com/en/companies/itmai/articles/541858/)
+- https://debuggercafe.com/custom-backbone-for-pytorch-ssd/
 
 
 
