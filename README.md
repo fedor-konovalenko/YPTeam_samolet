@@ -6,7 +6,7 @@ Repo Structure:
 
 - /notebooks - experiments with models and scripts
 
-The article at Medium
+The article at Towards Data Science
 
 
 
