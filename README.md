@@ -6,7 +6,7 @@ Repo Structure:
 
 - /notebooks - experiments with models and scripts
 
-The article at Towards Data Science
+[The Medium Post](https://medium.com/@fdkonovalenko/computer-vision-for-building-sector-28bf3776d029)
 
 
 
